@@ -12,6 +12,7 @@ import Register from '@/pages/Register';
 import ForgotPassword from '@/pages/ForgotPassword';
 import ResetPassword from '@/pages/ResetPassword';
 import AppShell from '@/components/AppShell';
+import OAuthConsent from '@/pages/OAuthConsent';
 import Home from '@/pages/Home';
 import CharacterEdit from '@/pages/CharacterEdit';
 import Organizations from '@/pages/Organizations';
@@ -44,6 +45,7 @@ const AuthenticatedApp = () => {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/oauth-consent" element={<OAuthConsent />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
       <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
