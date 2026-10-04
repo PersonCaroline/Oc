@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ============ GOTH (default theme) ============ */
+    --background: 250 17% 5%;
+    --foreground: 255 45% 89%;
+    --card: 264 15% 13%;
+    --card-foreground: 255 45% 89%;
+    --popover: 258 12% 8%;
+    --popover-foreground: 255 45% 89%;
+    --primary: 46 65% 52%;
+    --primary-foreground: 250 17% 8%;
+    --secondary: 258 12% 14%;
+    --secondary-foreground: 255 45% 85%;
+    --muted: 258 12% 12%;
+    --muted-foreground: 255 18% 63%;
+    --accent: 0 100% 27%;
+    --accent-foreground: 46 65% 80%;
+    --destructive: 0 84% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 258 14% 20%;
+    --input: 258 14% 18%;
+    --ring: 46 65% 52%;
+    --glow-1: 0 100% 30%;
+    --glow-2: 46 65% 55%;
+    --radius: 1.25rem;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-display: 'Cinzel', serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --deco:
+      radial-gradient(circle at 15% 0%, hsl(0 100% 30% / 0.10), transparent 45%),
+      radial-gradient(circle at 85% 100%, hsl(46 65% 52% / 0.07), transparent 40%),
+      repeating-radial-gradient(circle at 50% 120%, transparent 0 34px, hsl(255 30% 30% / 0.05) 34px 35px);
+    --deco-card: linear-gradient(135deg, hsl(0 100% 30% / 0.06), transparent 45%, hsl(46 65% 52% / 0.05));
+  }
+
+  /* ============ CIRCUS ============ */
+  [data-theme='circus'] {
+    --background: 338 35% 6%;
+    --foreground: 40 60% 90%;
+    --card: 322 38% 12%;
+    --card-foreground: 40 60% 90%;
+    --popover: 322 35% 10%;
+    --popover-foreground: 40 60% 90%;
+    --primary: 43 74% 58%;
+    --primary-foreground: 338 35% 8%;
+    --secondary: 335 30% 16%;
+    --secondary-foreground: 40 60% 85%;
+    --muted: 330 25% 14%;
+    --muted-foreground: 35 25% 62%;
+    --accent: 356 72% 44%;
+    --accent-foreground: 40 60% 90%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 30% 20%;
+    --input: 340 30% 16%;
+    --ring: 43 74% 58%;
+    --glow-1: 356 72% 45%;
+    --glow-2: 43 74% 58%;
+    --deco:
+      radial-gradient(circle at 50% 0%, hsl(356 72% 45% / 0.10), transparent 45%),
+      repeating-linear-gradient(45deg, hsl(356 70% 40% / 0.07) 0 42px, transparent 42px 84px),
+      radial-gradient(circle at 80% 80%, hsl(43 74% 58% / 0.07), transparent 35%);
+    --deco-card: linear-gradient(160deg, hsl(356 72% 45% / 0.08), transparent 40%, hsl(43 74% 58% / 0.06));
+  }
+
+  /* ============ FOREST ============ */
+  [data-theme='forest'] {
+    --background: 130 22% 5%;
+    --foreground: 110 30% 88%;
+    --card: 125 18% 11%;
+    --card-foreground: 110 30% 88%;
+    --popover: 125 16% 9%;
+    --popover-foreground: 110 30% 88%;
+    --primary: 95 35% 58%;
+    --primary-foreground: 130 22% 7%;
+    --secondary: 125 16% 15%;
+    --secondary-foreground: 110 25% 82%;
+    --muted: 125 15% 13%;
+    --muted-foreground: 110 15% 60%;
+    --accent: 140 35% 28%;
+    --accent-foreground: 110 30% 85%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 125 15% 20%;
+    --input: 125 15% 16%;
+    --ring: 95 35% 58%;
+    --glow-1: 140 40% 38%;
+    --glow-2: 95 40% 55%;
+    --deco:
+      radial-gradient(circle at 10% 15%, hsl(140 40% 30% / 0.12), transparent 40%),
+      radial-gradient(circle at 90% 70%, hsl(95 40% 35% / 0.08), transparent 35%),
+      repeating-linear-gradient(100deg, transparent 0 90px, hsl(120 30% 40% / 0.04) 90px 92px);
+    --deco-card: linear-gradient(150deg, hsl(140 40% 35% / 0.10), transparent 45%, hsl(95 40% 45% / 0.07));
+  }
+
+  /* ============ DETECTIVE CORE ============ */
+  [data-theme='detective'] {
+    --background: 40 20% 6%;
+    --foreground: 45 30% 86%;
+    --card: 40 16% 11%;
+    --card-foreground: 45 30% 86%;
+    --popover: 40 14% 9%;
+    --popover-foreground: 45 30% 86%;
+    --primary: 45 55% 48%;
+    --primary-foreground: 40 20% 8%;
+    --secondary: 40 14% 15%;
+    --secondary-foreground: 45 25% 80%;
+    --muted: 40 13% 13%;
+    --muted-foreground: 42 14% 58%;
+    --accent: 15 50% 35%;
+    --accent-foreground: 45 30% 85%;
+    --destructive: 0 70% 42%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 14% 21%;
+    --input: 40 14% 17%;
+    --ring: 45 55% 48%;
+    --glow-1: 15 50% 38%;
+    --glow-2: 45 55% 50%;
+    --deco:
+      radial-gradient(circle at 50% -10%, hsl(45 55% 45% / 0.07), transparent 50%),
+      repeating-linear-gradient(0deg, transparent 0 3px, hsl(45 30% 60% / 0.02) 3px 4px);
+    --deco-card: linear-gradient(170deg, hsl(45 55% 45% / 0.07), transparent 50%);
+  }
+
+  /* ============ MAFIA ============ */
+  [data-theme='mafia'] {
+    --background: 240 8% 6%;
+    --foreground: 40 10% 88%;
+    --card: 240 8% 11%;
+    --card-foreground: 40 10% 88%;
+    --popover: 240 8% 9%;
+    --popover-foreground: 40 10% 88%;
+    --primary: 45 60% 55%;
+    --primary-foreground: 240 8% 8%;
+    --secondary: 240 7% 15%;
+    --secondary-foreground: 40 8% 80%;
+    --muted: 240 7% 13%;
+    --muted-foreground: 40 6% 58%;
+    --accent: 350 60% 30%;
+    --accent-foreground: 45 60% 80%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 8% 20%;
+    --input: 240 8% 16%;
+    --ring: 45 60% 55%;
+    --glow-1: 350 60% 35%;
+    --glow-2: 45 60% 55%;
+    --deco:
+      repeating-linear-gradient(90deg, hsl(45 50% 55% / 0.035) 0 1px, transparent 1px 26px),
+      radial-gradient(circle at 50% 0%, hsl(350 60% 35% / 0.10), transparent 45%);
+    --deco-card: linear-gradient(155deg, hsl(350 60% 35% / 0.08), transparent 45%, hsl(45 60% 55% / 0.05));
+  }
+
+  /* ============ ASYLUM ============ */
+  [data-theme='asylum'] {
+    --background: 195 14% 7%;
+    --foreground: 180 20% 87%;
+    --card: 195 12% 12%;
+    --card-foreground: 180 20% 87%;
+    --popover: 195 11% 10%;
+    --popover-foreground: 180 20% 87%;
+    --primary: 170 22% 58%;
+    --primary-foreground: 195 14% 8%;
+    --secondary: 195 10% 16%;
+    --secondary-foreground: 180 15% 80%;
+    --muted: 195 10% 13%;
+    --muted-foreground: 190 10% 58%;
+    --accent: 200 30% 38%;
+    --accent-foreground: 180 20% 85%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 195 12% 21%;
+    --input: 195 12% 17%;
+    --ring: 170 22% 58%;
+    --glow-1: 200 35% 42%;
+    --glow-2: 170 25% 55%;
+    --deco:
+      repeating-linear-gradient(0deg, transparent 0 47px, hsl(190 30% 60% / 0.05) 47px 48px),
+      repeating-linear-gradient(90deg, transparent 0 47px, hsl(190 30% 60% / 0.05) 47px 48px),
+      radial-gradient(circle at 50% 0%, hsl(200 35% 42% / 0.10), transparent 45%);
+    --deco-card: linear-gradient(165deg, hsl(200 35% 42% / 0.08), transparent 50%, hsl(170 25% 55% / 0.06));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  /* theme ambience layer */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: var(--deco);
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading;
+  }
+
+  ::selection {
+    background: hsl(var(--glow-1) / 0.4);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  /* Rounded, ombre-glowing cards */
+  .glow-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    background-color: hsl(var(--card));
+    transition: box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+  .glow-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--deco-card);
+    pointer-events: none;
+  }
+  .glow-card:hover {
+    border-color: hsl(var(--glow-1) / 0.35);
+    box-shadow: 0 8px 28px -10px hsl(var(--glow-1) / 0.4);
+  }
+  .glow-card:active,
+  .glow-card.glow-on {
+    border-color: hsl(var(--glow-1) / 0.8);
+    box-shadow:
+      0 0 0 1px hsl(var(--glow-1) / 0.55),
+      0 0 24px -4px hsl(var(--glow-1) / 0.55),
+      0 0 48px -8px hsl(var(--glow-2) / 0.5);
+  }
+
+  /* Ornate section divider */
+  .ornate-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: hsl(var(--primary));
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .ornate-divider::before,
+  .ornate-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+  }
+  .ornate-divider::before {
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.5));
+  }
+  .ornate-divider::after {
+    background: linear-gradient(90deg, hsl(var(--primary) / 0.5), transparent);
+  }
+
+  /* Status badges */
+  .badge-alive {
+    background: hsl(var(--glow-2) / 0.15);
+    color: hsl(var(--glow-2));
+    border: 1px solid hsl(var(--glow-2) / 0.4);
+  }
+  .badge-dead {
+    background: hsl(0 70% 40% / 0.18);
+    color: hsl(0 90% 68%);
+    border: 1px solid hsl(0 80% 40% / 0.55);
+  }
+
+  /* 5-node pip selector */
+  .pip-empty {
+    width: 14px;
+    height: 14px;
+    border-radius: 9999px;
+    border: 1.5px solid hsl(var(--border));
+    background: transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .pip-empty:hover {
+    border-color: hsl(var(--glow-2) / 0.6);
+  }
+  .pip-filled {
+    width: 14px;
+    height: 14px;
+    border-radius: 9999px;
+    border: 1.5px solid hsl(var(--glow-2));
+    background: hsl(var(--glow-2));
+    box-shadow: 0 0 8px hsl(var(--glow-2) / 0.6);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  /* Personality range slider — obsidian knob, glowing trail */
+  .oc-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, hsl(var(--glow-1) / 0.75), hsl(var(--glow-2) / 0.75));
+    outline: none;
+    cursor: pointer;
+  }
+  .oc-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: hsl(var(--card));
+    border: 2px solid hsl(var(--glow-2));
+    box-shadow: 0 0 10px hsl(var(--glow-1) / 0.7);
+    cursor: pointer;
+  }
+  .oc-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: hsl(var(--card));
+    border: 2px solid hsl(var(--glow-2));
+    box-shadow: 0 0 10px hsl(var(--glow-1) / 0.7);
+    cursor: pointer;
+  }
+}
