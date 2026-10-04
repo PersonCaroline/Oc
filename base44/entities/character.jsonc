@@ -1,0 +1,170 @@
+{
+  "name": "Character",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "nicknames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "age": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "pronouns": {
+      "type": "string"
+    },
+    "sexuality": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "origins": {
+      "type": "string"
+    },
+    "species": {
+      "type": "string"
+    },
+    "eye_color": {
+      "type": "string"
+    },
+    "hair_color": {
+      "type": "string"
+    },
+    "hair_style": {
+      "type": "string"
+    },
+    "height": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "string"
+    },
+    "mbti": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "alive",
+        "dead"
+      ],
+      "default": "alive"
+    },
+    "later_status": {
+      "type": "string",
+      "enum": [
+        "alive",
+        "dead",
+        "unknown"
+      ],
+      "default": "unknown"
+    },
+    "ability": {
+      "type": "string"
+    },
+    "ability_description": {
+      "type": "string"
+    },
+    "side_effects": {
+      "type": "string"
+    },
+    "weapon": {
+      "type": "string"
+    },
+    "affiliation": {
+      "type": "string"
+    },
+    "past_affiliation": {
+      "type": "string"
+    },
+    "rank": {
+      "type": "string"
+    },
+    "past_rank": {
+      "type": "string"
+    },
+    "job": {
+      "type": "string"
+    },
+    "side_job": {
+      "type": "string"
+    },
+    "fears": {
+      "type": "string"
+    },
+    "sickness": {
+      "type": "string"
+    },
+    "addictions": {
+      "type": "string"
+    },
+    "likes": {
+      "type": "string"
+    },
+    "dislikes": {
+      "type": "string"
+    },
+    "lore": {
+      "type": "string"
+    },
+    "avatar_url": {
+      "type": "string"
+    },
+    "appearance_images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "clothes_images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "moodboard_images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "personality": {
+      "type": "object"
+    },
+    "skills": {
+      "type": "object"
+    },
+    "social": {
+      "type": "object"
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "organization_id": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
