@@ -20,34 +20,34 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
+    runs-on: ubuntu-latest
 steps:
   -name: Checkout
-   uses: actions/checkout@v6
+    uses: actions/checkout@v6
 
   -name: set up node
-   uses: actions/setup-node@v6
-   with: 
+    uses: actions/setup-node@v6
+    with: 
      node-version: 22
      cache: npm
 
   -name: install dependencies
-   run: npm install
+    run: npm install
 
   -name: build
-   run: npm run build
+    run: npm run build
 
   -name: setup pages
-   uses: actions/configure-pages@v5
+    uses: actions/configure-pages@v5
 
   -name: upload website 
-   uses: actions/upload-pages-artifact@v4
-   with: 
-     path: './dist'
+    uses: actions/upload-pages-artifact@v4
+    with: 
+      path: './dist'
 
   -name: deploy to GitHub Pages
-   id: deployment
-   uses: action/deploy-pages@v4
+    id: deployment
+    uses: action/deploy-pages@v4
 
 
 
